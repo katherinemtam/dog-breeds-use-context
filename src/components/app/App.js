@@ -6,7 +6,6 @@ import BreedToggle from '../breeds/BreedToggle';
 function App() {
   return (
     <>
-      <BreedToggle />
       <BreedsList />
     </>
   );

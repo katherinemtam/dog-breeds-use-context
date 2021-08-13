@@ -1,9 +1,13 @@
-import React from 'react';
-import { useBreeds } from '../state/BreedProvider';
+import React, {useState, useEffect} from 'react';
+import { fetchDogs } from '../../services/dogApi';
 import Breed from './Breed';
 
 const BreedsList = () => {
-  const breeds = useBreeds();
+  const [breeds, setBreeds] = useState([]);
+
+  useEffect(() => {
+    fetchDogs().then(setBreeds);
+  }, [])
 
   const breedElements = breeds.map(breed => (
   <li key={breed.name}>
