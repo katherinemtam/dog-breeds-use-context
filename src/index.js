@@ -8,9 +8,11 @@ import BreedProvider from './components/state/BreedProvider';
 import ThemeProvider from './components/state/ThemeProvider';
 
 ReactDOM.render(
-  <ThemeProvider>
-    <App />
-  </ThemeProvider>,
+  <BreedProvider>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  </BreedProvider>,
   document.getElementById('root')
 );
 
