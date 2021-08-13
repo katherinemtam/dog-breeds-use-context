@@ -4,10 +4,7 @@ import BreedsList from './components/breeds/BreedsList';
 
 function App() {
   return (
-    <Switch>
-      <Route exact path="/" component={BreedsList} />
-    </Switch>
-
+    <BreedsList />
   );
 }
 
