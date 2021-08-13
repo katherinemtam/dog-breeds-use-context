@@ -4,11 +4,12 @@ import {BrowserRouter as Router} from 'react-router-dom'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import BreedProvider from './components/state/BreedProvider';
 
 ReactDOM.render(
-  <Router>
+  <BreedProvider>
     <App />
-  </Router>,
+  </BreedProvider>,
   document.getElementById('root')
 );
 
