@@ -34,4 +34,10 @@ export const useSetSelectedApi = () => {
   return setSelectedApi;
 }
 
+export const useAvailableAPIs = () => {
+  const { mapApi } = useContext(BreedContext);
+  console.log(mapApi);
+  return Object.keys(mapApi);
+}
+
 export default BreedProvider;
