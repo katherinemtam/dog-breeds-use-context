@@ -11,11 +11,12 @@ const BreedToggle = () => {
   }
 
   return(
-    <ul>
+    <ul className="flex">
       {availableAPIs.map(api => (
-        <li key={api}>
+        <li key={api} className="m-2 cursor-pointer">
           <label>{api}</label>
           <input 
+              className=""
               type="radio" 
               name="api" 
               value={api}

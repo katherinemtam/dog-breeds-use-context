@@ -6,7 +6,7 @@ const ThemeToggle = () => {
   const { mode, setTheme } = useThemes();
 
   return(
-      <div className="flex items-center justify-center w-full m-2">
+      <div>
         <label for="toggle" className="flex items-center cursor-pointer">
           <div className="mr-3 text-gray-700 font-medium">
             Dark Mode

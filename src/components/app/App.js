@@ -12,8 +12,10 @@ function App() {
   return (
     <div className={`flex flex-col justify-center items-center p-0 ${theme[mode]}`}>
       <h1 className="text-3xl">The CatDog Encyclopedia</h1>
-      <BreedToggle />
-      <ThemeToggle />
+      <section className="flex items-center w-1/4 m-2 justify-evenly w-4/5">
+        <BreedToggle />
+        <ThemeToggle />
+      </section>
       <BreedsList />
     </div>
   );
