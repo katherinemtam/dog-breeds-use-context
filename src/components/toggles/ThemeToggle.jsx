@@ -8,17 +8,17 @@ const ThemeToggle = () => {
   return(
       <div>
         <label for="toggle" className="flex items-center cursor-pointer">
-          <div className="mr-3 text-gray-700 font-medium">
+          <p className="mr-3 font-medium">
             Dark Mode
-          </div>
+          </p>
           <div className="relative">
             <input type="checkbox" id="toggle" className="sr-only" checked={mode === "light" ? true : false} onChange={setTheme}/>
             <div className="block bg-gray-600 w-14 h-8 rounded-full"></div>
             <div className="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
           </div>
-          <div className="ml-3 text-gray-700 font-medium">
+          <p className="ml-3 font-medium">
             Light Mode
-          </div>
+          </p>
         </label>
       </div>
   )

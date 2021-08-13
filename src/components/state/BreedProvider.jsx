@@ -9,8 +9,8 @@ export const BreedProvider = ({ children }) => {
   const [selectedApi, setSelectedApi] = useState('dogs');
 
   const mapApi = {
+    cats: fetchCats,
     dogs: fetchDogs,
-    cats: fetchCats
   }
 
   useEffect(() => {
