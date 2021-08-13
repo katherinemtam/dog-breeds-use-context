@@ -1,7 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import { fetchDogs } from '../../services/dogApi';
+import React from 'react';
 import { useBreeds } from '../state/BreedProvider';
-import { useThemes } from '../state/ThemeProvider';
 import Breed from './Breed';
 
 const BreedsList = () => {
@@ -17,3 +15,4 @@ const BreedsList = () => {
 }
 
 export default BreedsList;
+
