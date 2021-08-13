@@ -1,8 +1,13 @@
-import './App.css';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import BreedsList from './components/breeds/BreedsList';
 
 function App() {
   return (
-    <h1>hello</h1>
+    <Switch>
+      <Route exact path="/" component={BreedsList} />
+    </Switch>
+
   );
 }
 
