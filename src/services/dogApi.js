@@ -1,4 +1,4 @@
-export const fetchDogs = async() => {
+export const fetchDogs = async(page) => {
   const res = await fetch(`https://api.thedogapi.com/v1/breeds`)
   const json = await res.json();
 
@@ -9,5 +9,5 @@ export const fetchDogs = async() => {
     lifespan: dog.life_span || "Unknown"
   }))
 
-  return mungedDogs;
+  return mungedDogs.slice((page - 1) * 10, page * 10);
 }

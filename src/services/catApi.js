@@ -1,4 +1,4 @@
-export const fetchCats = async() => {
+export const fetchCats = async(page) => {
   const res = await fetch(`https://api.thecatapi.com/v1/breeds`)
   const json = await res.json();
 
@@ -9,5 +9,5 @@ export const fetchCats = async() => {
     lifespan: cat.life_span || "Unknown"
   }))
 
-  return mungedCats;
+  return mungedCats.slice((page - 1) * 10, page * 10);
 }
