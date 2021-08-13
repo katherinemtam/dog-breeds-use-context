@@ -5,11 +5,12 @@ import './index.css';
 import App from './components/app/App';
 import reportWebVitals from './reportWebVitals';
 import BreedProvider from './components/state/BreedProvider';
+import ThemeProvider from './components/state/ThemeProvider';
 
 ReactDOM.render(
-  <BreedProvider>
+  <ThemeProvider>
     <App />
-  </BreedProvider>,
+  </ThemeProvider>,
   document.getElementById('root')
 );
 
