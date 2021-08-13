@@ -10,12 +10,12 @@ const BreedsList = () => {
   }, [])
 
   const breedElements = breeds.map(breed => (
-  <li key={breed.name}>
+  <li key={breed.name} className=" flex justify-center border rounded-md m-4 w-64 p-2">
     <Breed {...breed}/>
   </li>
   ))
 
-  return <ul>{breedElements}</ul>
+  return <ul className="flex flex-wrap justify-center w-5/6">{breedElements}</ul>
 }
 
 export default BreedsList;
