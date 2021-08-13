@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router} from 'react-router-dom'
-import './index.css';
 import App from './components/app/App';
 import reportWebVitals from './reportWebVitals';
 import BreedProvider from './components/state/BreedProvider';
 import ThemeProvider from './components/state/ThemeProvider';
+import './index.css';
 
 ReactDOM.render(
   <BreedProvider>
