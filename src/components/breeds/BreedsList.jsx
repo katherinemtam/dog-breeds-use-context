@@ -7,7 +7,7 @@ const BreedsList = () => {
   const [breeds, setBreeds] = useState([]);
 
   useEffect(() => {
-    fetchDogs()
+    fetchCats()
     .then(setBreeds);
   }, [])
 
