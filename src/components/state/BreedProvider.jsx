@@ -9,13 +9,15 @@ export const BreedProvider = ({ children }) => {
   const [selectedApi, setSelectedApi] = useState('dogs');
   const [page, setPage] = useState(1);
 
+  //bind return new function that automatically calls page as its first argument
+  //null = this.something = example: cat.insert.bind(cat)
   const mapApi = {
-    cats: fetchCats(page),
-    dogs: fetchDogs(page),
+    cats: fetchCats.bind(null, page),
+    dogs: fetchDogs.bind(null, page),
   }
 
   useEffect(() => {
-    mapApi[selectedApi].then(setBreeds);
+    mapApi[selectedApi]().then(setBreeds);
   }, [selectedApi, page])
 
   return(
