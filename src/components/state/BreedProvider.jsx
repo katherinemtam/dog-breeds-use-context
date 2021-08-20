@@ -10,12 +10,13 @@ export const BreedProvider = ({ children }) => {
   const [page, setPage] = useState(1);
 
   const mapApi = {
-    cats: fetchCats(page),
-    dogs: fetchDogs(page),
+    cats: fetchCats,
+    dogs: fetchDogs,
   }
 
   useEffect(() => {
-    mapApi[selectedApi].then(setBreeds);
+    // if you don't invoke functions on lines 13 & 14, you can invoke here
+    mapApi[selectedApi](page).then(setBreeds);
   }, [selectedApi, page])
 
   return(
